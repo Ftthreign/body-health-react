@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  --radius-value: 14px;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+
+  text-align: center;
+}
+
+body {
+  background: rgb(15, 32, 39);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 32, 39, 1) 0%,
+    rgba(32, 58, 67, 1) 0%,
+    rgba(44, 83, 100, 1) 77%
+  );
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bmi-card {
+  height: 300px;
+  width: 500px;
+  background-color: tomato;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.input-data {
+  display: flex;
+  /* flex-direction: column; */
+  width: fit-content;
+  /* position: static; */
+  max-width: 150px;
+}
+
+.input-data label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  /* background: tomato; */
+  width: fit-content;
+  font-size: 16px;
+}
+
+.input-data input[type="number"] {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 1px #818cf8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.input-data input[type="number"]:focus {
+  outline: none;
+}
+
+.bmi-result {
+  display: flex;
+  justify-content: space-between;
+  background-color: #426bfb;
+  border-radius: 12px 50px 50px 12px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.bmi-result div {
+  width: 350px;
+}
+
+.header {
+  display: flex;
+  background-color: #ffdd95;
+  border-radius: var(--radius-value);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.header-title {
+  width: 30%;
+}
+
+.description-list {
+  /* position: absolute; */
+  padding: 20px;
+  display: flex;
+  /* margin-top: 40px; */
+  top: 370px;
+  background-color: #818cf8;
+  border-radius: var(--radius-value);
+  margin: 20px 0;
+}
+
+.image-data {
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #f9ddeb;
+}
+
+.data-information {
+  display: flex;
+  font-weight: 600;
+  color: white;
+  margin: 20px 0;
+  gap: 10px;
+  background-color: #426bfb;
+  border-radius: var(--radius-value);
+}
+
+.information-BMI {
+  padding: 50px;
+  width: 60%;
+}
