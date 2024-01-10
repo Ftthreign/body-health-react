@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Header from "./components/header";
-import BMICalculator from "./components/BMICalculator";
+import BMICalculator from "./components/BMICalculator/BMICalculator";
 import Description from "./components/Description";
-import BMIDescription from "./components/BMIDescription";
+import BMIDescription from "./components/BMICalculator/BMIDescription";
+import HealthyList from "./components/grocery/HealthyList";
+import Footer from "./components/footer/footer";
 
 function App() {
   const [height, setHeight] = useState(0);
@@ -36,6 +38,12 @@ function App() {
         </div>
       </div>
       <Description />
+
+      <div className="get-to-do">
+        <HealthyList />
+      </div>
+
+      <Footer />
     </div>
   );
 }

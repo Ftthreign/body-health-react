@@ -123,3 +123,102 @@ body {
   padding: 50px;
   width: 60%;
 }
+
+.get-to-do {
+  background: rgb(17, 153, 142);
+  background: linear-gradient(
+    222deg,
+    rgba(17, 153, 142, 1) 0%,
+    rgba(71, 251, 139, 1) 98%
+  );
+  border-radius: var(--radius-value);
+  padding: 10px;
+}
+
+.form-healthy {
+  width: 700px;
+  height: 300px;
+  background-color: white;
+  border-radius: 12px 75px 75px 12px;
+}
+
+.container-input {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.container-input img {
+  border-radius: 24px;
+  background-color: #ffdd95;
+  padding: 18px;
+  height: 50px;
+}
+
+.container-input select {
+  outline: none;
+  padding: 12px;
+  border-radius: 18px;
+  width: 150px;
+}
+
+.container-input button {
+  width: 35px;
+  height: 35px;
+  background-color: #426bfb;
+  outline: none;
+  border: none;
+  border-radius: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+.button-count {
+  background-color: #818cf8;
+  border-radius: 24px;
+  height: 54px;
+}
+
+.checkout {
+  width: 700px;
+  height: 300px;
+  background-color: white;
+  border-radius: 75px 12px 12px 75px;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.healthy-list-data {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.checkout-btn {
+  width: 100px;
+  background-color: #818cf8;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.checkout-btn:hover {
+  transform: scale(1.02);
+}
+
+.checkout > p,
+.form-healthy > p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #426bfb;
+}
