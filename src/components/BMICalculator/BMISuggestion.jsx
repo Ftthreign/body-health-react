@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 function Suggestion({ result }) {
   return (
     <h3>
@@ -13,5 +13,9 @@ function Suggestion({ result }) {
     </h3>
   );
 }
+
+Suggestion.propTypes = {
+  result: PropTypes.number,
+};
 
 export default Suggestion;

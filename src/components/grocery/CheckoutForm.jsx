@@ -1,4 +1,11 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
+CheckoutForm.propTypes = {
+  totalPrice: PropTypes.number,
+  setCount: PropTypes.func,
+  setItemSelected: PropTypes.func,
+};
+
 function CheckoutForm({ totalPrice, setCount, setItemSelected }) {
   const discount = totalPrice * 0.1;
 

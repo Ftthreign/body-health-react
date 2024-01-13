@@ -1,4 +1,15 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
+ItemData.propTypes = {
+  data: PropTypes.array,
+  itemSelected: PropTypes.string,
+  setItemSelected: PropTypes.func,
+  count: PropTypes.number,
+  setCount: PropTypes.func,
+  totalPrice: PropTypes.number,
+  stockLeft: PropTypes.number,
+  selectedItem: PropTypes.object,
+};
 function ItemData({
   data,
   setItemSelected,

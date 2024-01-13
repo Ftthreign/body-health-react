@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
 import FormInput from "./BMIForm";
 import Result from "./BMIResult";
+import PropTypes from "prop-types";
+
 function BMICalculator({ weight, height, setHeight, setWeight, BMIValue }) {
   return (
     <div className="bmi-card">
@@ -21,5 +22,17 @@ function BMICalculator({ weight, height, setHeight, setWeight, BMIValue }) {
 function Title({ children }) {
   return <h3>{children}</h3>;
 }
+
+BMICalculator.propTypes = {
+  weight: PropTypes.number,
+  height: PropTypes.number,
+  setHeight: PropTypes.func,
+  setWeight: PropTypes.func,
+  BMIValue: PropTypes.number,
+};
+
+Title.propTypes = {
+  children: PropTypes.string,
+};
 
 export default BMICalculator;

@@ -1,7 +1,18 @@
 import { useState } from "react";
 import CheckoutForm from "./CheckoutForm";
 import HealthyForm from "./HealthyForm";
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
+HealthyList.propTypes = {
+  data: PropTypes.array,
+  itemSelected: PropTypes.string,
+  setItemSelected: PropTypes.func,
+  count: PropTypes.number,
+  setCount: PropTypes.func,
+  totalPrice: PropTypes.number,
+  stockLeft: PropTypes.number,
+  selectedItem: PropTypes.object,
+};
 const healthyFood = [
   {
     name: "Apple",

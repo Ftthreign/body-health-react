@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 const dataItem = [
   {
     icon: "../../fast-food.png",
@@ -48,4 +49,9 @@ function DescriptionList({ title, description, icon }) {
   );
 }
 
+DescriptionList.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  icon: PropTypes.string,
+};
 export default Description;

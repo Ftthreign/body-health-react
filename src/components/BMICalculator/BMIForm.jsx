@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 function FormInput({ height, onSetHeight, weight, onSetWeight }) {
   return (
     <form>
@@ -24,5 +25,12 @@ function FormInput({ height, onSetHeight, weight, onSetWeight }) {
     </form>
   );
 }
+
+FormInput.propTypes = {
+  height: PropTypes.number,
+  onSetHeight: PropTypes.func,
+  weight: PropTypes.number,
+  onSetWeight: PropTypes.func,
+};
 
 export default FormInput;

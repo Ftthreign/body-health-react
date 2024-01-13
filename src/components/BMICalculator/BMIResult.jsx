@@ -1,5 +1,6 @@
 import Suggestion from "./BMISuggestion";
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
+
 function Result({ weight, height, result }) {
   return (
     <div className="bmi-result">
@@ -22,5 +23,11 @@ function Result({ weight, height, result }) {
     </div>
   );
 }
+
+Result.propTypes = {
+  weight: PropTypes.number,
+  height: PropTypes.number,
+  result: PropTypes.number,
+};
 
 export default Result;

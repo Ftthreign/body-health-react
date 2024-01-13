@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
-
+import PropTypes from "prop-types";
 const BMIData = [
   {
     title: "Normal",
@@ -56,6 +55,10 @@ const BMIDescription = ({ valueBMI }) => {
       </h3>
     </div>
   );
+};
+
+BMIDescription.propTypes = {
+  valueBMI: PropTypes.number,
 };
 
 export default BMIDescription;
