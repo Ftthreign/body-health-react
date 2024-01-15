@@ -1,8 +1,12 @@
 import { useState } from "react";
+
 import Header from "./components/header";
 import BMICalculator from "./components/BMICalculator/BMICalculator";
-import Description from "./components/Description";
+import FormInput from "./components/BMICalculator/BMIForm";
+import Result from "./components/BMICalculator/BMIResult";
+import BMIInformation from "./components/BMICalculator/BMIInformation";
 import BMIDescription from "./components/BMICalculator/BMIDescription";
+import Description from "./components/Description";
 import HealthyList from "./components/grocery/HealthyList";
 import Footer from "./components/footer/footer";
 
@@ -15,33 +19,24 @@ function App() {
     <div>
       <div className="header">
         <Header />
-        <BMICalculator
-          height={height}
-          weight={weight}
-          setHeight={setHeight}
-          setWeight={setWeight}
-          BMIValue={BMIValue}
-        />
+        <BMICalculator>
+          <FormInput
+            weight={weight}
+            onSetWeight={setWeight}
+            height={height}
+            onSetHeight={setHeight}
+          />
+          <Result weight={weight} height={height} result={BMIValue} />
+        </BMICalculator>
       </div>
 
-      <div className="data-information">
-        <img
-          src="./healthy-people.webp"
-          width={"400px"}
-          height={"400px"}
-          style={{ borderRadius: "14px 0 0 14px" }}
-        />
+      <BMIInformation>
+        <BMIDescription valueBMI={BMIValue} />
+      </BMIInformation>
 
-        <div className="information-BMI">
-          <h1>What your BMI result means</h1>
-          <BMIDescription valueBMI={BMIValue} />
-        </div>
-      </div>
       <Description />
 
-      <div className="get-to-do">
-        <HealthyList />
-      </div>
+      <HealthyList />
 
       <Footer />
     </div>
