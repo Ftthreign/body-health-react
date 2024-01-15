@@ -1,20 +1,10 @@
-import FormInput from "./BMIForm";
-import Result from "./BMIResult";
 import PropTypes from "prop-types";
 
-function BMICalculator({ weight, height, setHeight, setWeight, BMIValue }) {
+function BMICalculator({ children }) {
   return (
     <div className="bmi-card">
       <Title>Enter your details below</Title>
-      <div className="input-container">
-        <FormInput
-          weight={weight}
-          onSetWeight={setWeight}
-          height={height}
-          onSetHeight={setHeight}
-        />
-        <Result weight={weight} height={height} result={BMIValue} />
-      </div>
+      <div className="input-container">{children}</div>
     </div>
   );
 }
@@ -24,11 +14,7 @@ function Title({ children }) {
 }
 
 BMICalculator.propTypes = {
-  weight: PropTypes.number,
-  height: PropTypes.number,
-  setHeight: PropTypes.func,
-  setWeight: PropTypes.func,
-  BMIValue: PropTypes.number,
+  children: PropTypes.array,
 };
 
 Title.propTypes = {
