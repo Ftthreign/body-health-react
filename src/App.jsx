@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-import Header from "./components/header";
-import BMICalculator from "./components/BMICalculator/BMICalculator";
-import FormInput from "./components/BMICalculator/BMIForm";
-import Result from "./components/BMICalculator/BMIResult";
-import BMIInformation from "./components/BMICalculator/BMIInformation";
-import BMIDescription from "./components/BMICalculator/BMIDescription";
-import Description from "./components/Description";
-import HealthyList from "./components/grocery/HealthyList";
-import Footer from "./components/footer/footer";
+import Header from "@/header";
+import Description from "@/Description";
+import Footer from "@/footer/footer";
+import BMICalculator from "BMICalculator/BMICalculator";
+import FormInput from "BMICalculator/BMIForm";
+import Result from "BMICalculator/BMIResult";
+import BMIInformation from "BMICalculator/BMIInformation";
+import BMIDescription from "BMICalculator/BMIDescription";
+import HealthyList from "Grocery/HealthyList";
 
 function App() {
   const [height, setHeight] = useState(0);
