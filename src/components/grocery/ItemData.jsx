@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 
 ItemData.propTypes = {
-  data: PropTypes.array,
-  itemSelected: PropTypes.string,
+  data: PropTypes.array.isRequired,
+  itemSelected: PropTypes.string.isRequired,
   setItemSelected: PropTypes.func,
-  count: PropTypes.number,
-  setCount: PropTypes.func,
-  totalPrice: PropTypes.number,
-  stockLeft: PropTypes.number,
-  selectedItem: PropTypes.object,
+  count: PropTypes.number.isRequired,
+  setCount: PropTypes.func.isRequired,
+  totalPrice: PropTypes.number.isRequired,
+  stockLeft: PropTypes.number.isRequired,
+  selectedItem: PropTypes.object.isRequired,
 };
 function ItemData({
   data,

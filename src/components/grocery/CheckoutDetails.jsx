@@ -19,7 +19,7 @@ function CheckoutDetails({ totalPrice, discount, discountValue }) {
 }
 
 CheckoutDetails.propTypes = {
-  totalPrice: PropTypes.number,
+  totalPrice: PropTypes.number.isRequired,
   discount: PropTypes.number,
   discountValue: PropTypes.number,
 };
