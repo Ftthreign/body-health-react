@@ -1,4 +1,4 @@
-import Suggestion from "./BMISuggestion";
+import Suggestion from "./Suggestion";
 import PropTypes from "prop-types";
 
 function Result({ weight, height, result }) {
