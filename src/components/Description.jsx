@@ -1,28 +1,6 @@
 import PropTypes from "prop-types";
 
-const dataItem = [
-  {
-    icon: "../../fast-food.png",
-    title: "Healthy eating",
-    description:
-      "Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood",
-    id: 1990,
-  },
-  {
-    icon: "../../dumbbell.png",
-    title: "Regular Exercise",
-    description:
-      "Exercise impoves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity",
-    id: 1991,
-  },
-  {
-    icon: "../../sleep.png",
-    title: "Adequate sleep",
-    description:
-      "Sleep enhances mental clarity, emotional, stability, and physical wellness, promoting overall restoration and rejuvenation",
-    id: 1992,
-  },
-];
+import { dataItem } from "../data/DataUtils";
 
 function Description() {
   return (

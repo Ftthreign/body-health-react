@@ -6,54 +6,7 @@ import ItemData from "./ItemData";
 import HealthyForm from "./HealthyForm";
 import CheckoutDetails from "./CheckoutDetails";
 import CheckoutResult from "./CheckoutResult";
-
-HealthyList.propTypes = {
-  data: PropTypes.array,
-  itemSelected: PropTypes.string,
-  setItemSelected: PropTypes.func,
-  count: PropTypes.number,
-  setCount: PropTypes.func,
-  totalPrice: PropTypes.number,
-  stockLeft: PropTypes.number,
-  selectedItem: PropTypes.object,
-};
-const healthyFood = [
-  {
-    name: "Apple",
-    type: "Fruit",
-    price: 5000,
-    stock: 50,
-    image: "../../foods/apple.png",
-  },
-  {
-    name: "Broccoli",
-    type: "Vegetable",
-    price: 7000,
-    stock: 30,
-    image: "../../foods/broccoli.png",
-  },
-  {
-    name: "Avocado",
-    type: "Fruit",
-    price: 10000,
-    stock: 40,
-    image: "../../foods/avocado.png",
-  },
-  {
-    name: "Salmon Fish",
-    type: "Protein",
-    price: 25000,
-    stock: 20,
-    image: "../../foods/fish.png",
-  },
-  {
-    name: "Organic Honey",
-    type: "Bee Product",
-    price: 15000,
-    stock: 25,
-    image: "../../foods/honey.png",
-  },
-];
+import { healthyFood } from "../../data/DataUtils";
 
 function HealthyList() {
   const [itemSelected, setItemSelected] = useState("Apple");
@@ -103,5 +56,16 @@ function HealthyList() {
     </div>
   );
 }
+
+HealthyList.propTypes = {
+  data: PropTypes.array,
+  itemSelected: PropTypes.string,
+  setItemSelected: PropTypes.func,
+  count: PropTypes.number,
+  setCount: PropTypes.func,
+  totalPrice: PropTypes.number,
+  stockLeft: PropTypes.number,
+  selectedItem: PropTypes.object,
+};
 
 export default HealthyList;
