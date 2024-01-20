@@ -7,17 +7,18 @@ const BMIDescription = ({ valueBMI }) => {
   const [typeBMI, setTypeBMI] = useState("Normal");
 
   function handleChanges(bmiValue) {
-    if (bmiValue < 18.5) {
-      return "Underweight";
-    } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-      return "Normal";
-    } else if (bmiValue >= 25 && bmiValue <= 29.9) {
-      return "Overweight";
-    } else if (bmiValue > 30) {
-      return "Obesity";
-    } else {
-      return "Normal";
-    }
+    const BMI_RANGE = [
+      { range: [0, 18.4], status: "Underweight" },
+      { range: [18.5, 24.9], status: "Normal" },
+      { range: [25, 29.9], status: "Overweight" },
+      { range: [30, Number.MAX_VALUE], status: "Obesity" },
+    ];
+
+    const result = BMI_RANGE.find(
+      ({ range }) => bmiValue >= range[0] && bmiValue <= range[1]
+    );
+
+    return result ? result.status : "Normal";
   }
 
   if (valueBMI !== undefined) {
