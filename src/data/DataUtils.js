@@ -1,4 +1,4 @@
-export const dataItem = [
+const dataItem = [
   {
     icon: "../../fast-food.png",
     title: "Healthy eating",
@@ -22,7 +22,7 @@ export const dataItem = [
   },
 ];
 
-export const BMIData = [
+const BMIData = [
   {
     title: "Normal",
     description:
@@ -45,7 +45,7 @@ export const BMIData = [
   },
 ];
 
-export const healthyFood = [
+const healthyFood = [
   {
     name: "Apple",
     type: "Fruit",
@@ -82,3 +82,5 @@ export const healthyFood = [
     image: "../../foods/honey.png",
   },
 ];
+
+export { dataItem, healthyFood, BMIData };
